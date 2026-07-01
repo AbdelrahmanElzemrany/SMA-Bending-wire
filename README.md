@@ -36,7 +36,6 @@ To verify the tracking performance of the completed feedforward control loop:
 * **Scoping and Boundary Assumptions:** For this specific simulation model stage, two key boundary conditions were established:
   1. The FORC dataset is calculated under a single, constant mechanical bending load.
   2. Temperature is driven directly as an ideal input signal, separating the core thermodynamic material behavior from external electro-thermal delays like physical Joule heating or convective environmental cooling.
-* *Both of these architectural boundaries and their broader engineering implications are discussed comprehensively throughout my breakdown video series.*
-
+*These limitations are discussed in subsquent repository
 ## Technical Documentation
 For the comprehensive mathematical derivations, thermodynamic state equations, and detailed experimental analysis supporting this project, please refer to my attached technical report: **`Shape memory alloy.pdf`**.
