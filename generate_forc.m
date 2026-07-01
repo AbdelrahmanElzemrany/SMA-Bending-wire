@@ -1,7 +1,6 @@
 % =========================================================================
 % FIRST-ORDER REVERSAL CURVES (FORC) DATA GENERATION ONLY
-% NATIVE SIMULINK STRUCTURE EDITION (NO PREISACH DERIVATIVES)
-% =========================================================================
+
 clear; clc; close all;
 
 % --- 1. CONFIGURATION & GRID DEFINITION ---
