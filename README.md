@@ -1,6 +1,6 @@
 # SMA Bending Wire Control System Analysis (MATLAB & Simulink)
 
-This repository contains my personal engineering framework for modeling, simulating, and implementing trajectory tracking control for a Shape Memory Alloy (SMA) bending wire actuator based on Lagoudas thermodynamics. The objective of this project is to analyze the tracking limitations of standard linear feedback controllers under material hysteresis and validate a custom path-dependent feedforward architecture.
+This repository contains the complete engineering framework for modeling, simulating, and implementing trajectory tracking control for a Shape Memory Alloy (SMA) bending wire actuator based on Lagoudas thermodynamics. The objective of this project was to analyze the tracking limitations of standard linear feedback controllers under material hysteresis and successfully validate a custom path-dependent feedforward architecture.
 
 ## Execution and Simulation Steps
 
@@ -30,13 +30,13 @@ To verify the tracking performance of the completed feedforward control loop:
 
 ---
 
-## Technical Specifications & Model Limitations
+## Technical Specifications & Model Boundary Conditions
 
 * **Solver Configuration Requirements:** If you extract the core `pure_bending_sma_wire` subsystem to run independent test cases, you must manually adjust the configuration parameters (`Ctrl + E`). The block requires a **Fixed-Step Solver** set to **ode4 (Runge-Kutta)** with an explicit fixed step size of `0.0001` seconds to ensure numerical simulation stability.
-* **Acknowledged Simplifications:** To maintain analytical clarity in this stage of development, the model contains two main engineering limitations:
-  1. The FORC dataset is calculated entirely under a single, constant mechanical bending load.
-  2. The simulation lacks an electro-thermal subsystem block; temperature is driven directly as an ideal input signal, bypassing physical Joule heating and convective cooling delays.
-* *I am currently developing solutions for both constraints and will demonstrate the integration of the dynamic loading and electro-thermal models in my upcoming explanation videos.*
+* **Scoping and Boundary Assumptions:** For this specific simulation model stage, two key boundary conditions were established:
+  1. The FORC dataset is calculated under a single, constant mechanical bending load.
+  2. Temperature is driven directly as an ideal input signal, separating the core thermodynamic material behavior from external electro-thermal delays like physical Joule heating or convective environmental cooling.
+* *Both of these architectural boundaries and their broader engineering implications are discussed comprehensively throughout my breakdown video series.*
 
 ## Technical Documentation
 For the comprehensive mathematical derivations, thermodynamic state equations, and detailed experimental analysis supporting this project, please refer to my attached technical report: **`Shape memory alloy.pdf`**.
