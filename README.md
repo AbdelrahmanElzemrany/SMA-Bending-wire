@@ -1,4 +1,4 @@
-[Click here to view the 4-minute video explaining the whole process.]([https://drive.google.com/drive/u/0/folders/1m-NyGNsKJ3eKfLIFNobjmQB3yitPuI5l](https://drive.google.com/file/d/1Rn8Hdbc34DBBd66nuptR8OTe7HorPT5Z/view?usp=sharing))
+[Click here to view the 4-minute video explaining the whole process.](https://drive.google.com/file/d/1Rn8Hdbc34DBBd66nuptR8OTe7HorPT5Z/view?usp=sharing)
 # SMA Bending Wire Control System Analysis (MATLAB & Simulink)
 
 This repository contains the complete engineering framework for modeling, simulating, and implementing trajectory tracking control for a Shape Memory Alloy (SMA) bending wire actuator based on Lagoudas thermodynamics. The objective of this project was to analyze the tracking limitations of standard linear feedback controllers under material hysteresis and successfully validate a custom path-dependent feedforward architecture.
