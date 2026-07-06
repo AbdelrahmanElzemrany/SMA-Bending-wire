@@ -3,26 +3,34 @@
 
 This repository contains the complete engineering framework for modeling, simulating, and implementing trajectory tracking control for a Shape Memory Alloy (SMA) bending wire actuator based on Lagoudas thermodynamics. The objective of this project was to analyze the tracking limitations of standard linear feedback controllers under material hysteresis and successfully validate a custom path-dependent feedforward architecture.
 
+## 📝 Project Overview
+
+Shape Memory Alloys (SMAs) provide high power-to-weight ratios for actuation but exhibit severe **material hysteresis** during thermal phase transitions. As the material transitions between its cold martensite and hot austenite phases, the temperature-to-curvature relationship becomes highly non-linear, multi-valued, and path-dependent. 
+
+Because of this hysteresis loop, a single target curvature value corresponds to completely different temperatures depending on whether the wire is currently heating or cooling. Standard linear feedback loops (like conventional PI controllers) are fundamentally unequipped to handle this behavior. They experience massive calculation lag, track sluggishly, and cannot settle accurately because they treat the system as a single-valued, linear plant.
+
+This project resolves this issue by developing a **path-dependent feedforward controller**. By mapping the exact boundaries of the material's structural hysteresis using First-Order Reversal Curves (FORC), the architecture instantly predicts and switches between dedicated heating and cooling trajectory tables on the fly, completely eliminating tracking errors.
+
 ## 🛠️ Pipeline & File Architecture
 
 The repository is structured sequentially to take the system from raw material characterization to a verified path-dependent feedforward tracking controller:
 
 ### 1. Characterizing Material Hysteresis
-* **Sec1_Step_1_Hysteresis_in_SMAs.slx**: Simulink block diagram modeling the baseline thermomechanical behavior of the SMA wire actuator under a constant mechanical load.
-* **Sec1_Step_2_HysteresisPlot.m**: MATLAB execution script that runs the baseline simulation and plots the resulting multi-valued heating and cooling hysteresis paths.
+* **`Sec1_Step_1_Hysteresis_in_SMAs.slx`**: Simulink block diagram modeling the baseline thermomechanical behavior of the SMA wire actuator under a constant mechanical load.
+* **`Sec1_Step_2_HysteresisPlot.m`**: MATLAB execution script that runs the baseline simulation and plots the resulting multi-valued heating and cooling hysteresis paths.
 
 ### 2. Evaluating the Baseline PI Controller
-* **Sec2_Step_1_PIDControl.slx**: Closed-loop tracking architecture implementing an inverted negative-gain PI loop to fight the underlying material physics.
-* **Sec2_Step_2_SMABehaviourWithPID.m**: Post-processing tracking evaluation script displaying the dual-axis response plots to expose pure mathematical calculation lag.
+* **`Sec2_Step_1_PIDControl.slx`**: Closed-loop tracking architecture implementing an inverted negative-gain PI loop to fight the underlying material physics.
+* **`Sec2_Step_2_SMABehaviourWithPID.m`**: Post-processing tracking evaluation script displaying the dual-axis response plots to expose pure mathematical calculation lag.
 
 ### 3. Executing the FORC Data Collection Framework
-* **Sec3_Step_1_FORC_Experiment.slx**: Specialized experimental simulation subsystem utilized to sweep individual thermal reversal loops through the hysteresis bounds.
-* **Sec3_Step_2_FORC_Initialization.m**: Automation script orchestrating 50 sequential trial runs to systematically gather high-resolution raw trajectory matrix paths.
+* **`Sec3_Step_1_FORC_Experiment.slx`**: Specialized experimental simulation subsystem utilized to sweep individual thermal reversal loops through the hysteresis bounds.
+* **`Sec3_Step_2_FORC_Initialization.m`**: Automation script orchestrating 50 sequential trial runs to systematically gather high-resolution raw trajectory matrix paths.
 
 ### 4. Validating the Path-Dependent Feedforward Architecture
-* **Sec4_Step_1_tablesextractingscript.m**: Matrix processing tool that isolates and exports separate 1-D directional data lookup arrays for the heating and cooling tracks.
-* **Sec4_Step_2_FinalShape.slx**: Feedforward architecture integrating the extracted lookup tables alongside a dynamic path-direction switch block.
-* **Sec4_Step_3_SMABehaviourWithFFTables.m**: Verification script confirming that calculation delays and tracking errors are completely eliminated across the trajectory.
+* **`Sec4_Step_1_tablesextractingscript.m`**: Matrix processing tool that isolates and exports separate 1-D directional data lookup arrays for the heating and cooling tracks.
+* **`Sec4_Step_2_FinalShape.slx`**: Feedforward architecture integrating the extracted lookup tables alongside a dynamic path-direction switch block.
+* **`Sec4_Step_3_SMABehaviourWithFFTables.m`**: Verification script confirming that calculation delays and tracking errors are completely eliminated across the trajectory.
 
 ---
 
