@@ -17,7 +17,7 @@ Figure 1 This block diagram to analyse the system with sine wave input temperatu
 Figure 2 The plot show the distinction between heating and cooling paths due to the hystersis which results multi outputs for one input value
 
 <img width="1321" height="692" alt="image" src="https://github.com/user-attachments/assets/08711e0d-76fb-43a9-bb3e-d1d066d20079" />
-Figure 3 A Negative PI configuration to anlyse the effect of the SMA Hystersis 
+Figure 3 A Negative PI configuration to analyse the effect of the SMA Hystersis 
 
 <img width="1917" height="921" alt="image" src="https://github.com/user-attachments/assets/ea83a971-166f-49bb-9245-d49fe0ccfc24" />
 Figure 4 The resulting mathimatical confusion due to the hystersis that causes software mathimatical lag
