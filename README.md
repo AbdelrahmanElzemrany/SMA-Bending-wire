@@ -12,6 +12,9 @@ Because of this hysteresis loop, a single target curvature value corresponds to 
 This project resolves this issue by developing a **path-dependent feedforward controller**. By mapping the exact boundaries of the material's structural hysteresis using First-Order Reversal Curves (FORC), the architecture instantly predicts and switches between dedicated heating and cooling trajectory tables on the fly, completely eliminating tracking errors.
 <img width="1161" height="685" alt="image" src="https://github.com/user-attachments/assets/9b9abe60-8864-4e6c-ba8a-17c27d4baec4" />
 
+<img width="937" height="620" alt="image" src="https://github.com/user-attachments/assets/cf7520a5-59f4-4f4c-ac68-dc4183ba4a1c" />
+
+
 <img width="1017" height="602" alt="image" src="https://github.com/user-attachments/assets/8cc450d2-3f14-4b4e-ab9a-628f7459f629" />
 
 
