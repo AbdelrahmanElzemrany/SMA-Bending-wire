@@ -29,6 +29,9 @@ This project resolves this issue by developing a **path-dependent feedforward co
 
 <img width="1017" height="602" alt="image" src="https://github.com/user-attachments/assets/8cc450d2-3f14-4b4e-ab9a-628f7459f629" />
 
+<img width="1917" height="926" alt="image" src="https://github.com/user-attachments/assets/cd592f10-9841-4aca-84bc-6190ef388064" />
+
+
 
 
 ## 🛠️ Pipeline & File Architecture
