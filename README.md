@@ -14,6 +14,9 @@ This project resolves this issue by developing a **path-dependent feedforward co
 
 <img width="937" height="620" alt="image" src="https://github.com/user-attachments/assets/cf7520a5-59f4-4f4c-ac68-dc4183ba4a1c" />
 
+<img width="1321" height="692" alt="image" src="https://github.com/user-attachments/assets/08711e0d-76fb-43a9-bb3e-d1d066d20079" />
+
+
 <img width="1917" height="921" alt="image" src="https://github.com/user-attachments/assets/ea83a971-166f-49bb-9245-d49fe0ccfc24" />
 
 
