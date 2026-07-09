@@ -11,33 +11,33 @@ Because of this hysteresis loop, a single target curvature value corresponds to 
 
 This project resolves this issue by developing a **path-dependent feedforward controller**. By mapping the exact boundaries of the material's structural hysteresis using First-Order Reversal Curves (FORC), the architecture instantly predicts and switches between dedicated heating and cooling trajectory tables on the fly, completely eliminating tracking errors.
 <img width="1161" height="685" alt="image" src="https://github.com/user-attachments/assets/9b9abe60-8864-4e6c-ba8a-17c27d4baec4" />
-Figure 1 This block diagram to analyse the system with sine wave input temperature command
+Figure 1 This block diagram is about analyzing the standalone SMA wire that is bent with sine wave input temperature command.
 <img width="937" height="620" alt="image" src="https://github.com/user-attachments/assets/cf7520a5-59f4-4f4c-ac68-dc4183ba4a1c" />
 
-Figure 2 The plot show the distinction between heating and cooling paths due to the hystersis which results multi outputs for one input value
+Figure 2 The plot shows the distinction between heating and cooling paths due to the material hysteresis which results multi outputs for one input value.
 
 <img width="1321" height="692" alt="image" src="https://github.com/user-attachments/assets/08711e0d-76fb-43a9-bb3e-d1d066d20079" />
-Figure 3 A Negative PI configuration to analyse the effect of the SMA Hystersis 
+Figure 3 A Negative PI configuration to analyze the effect of the SMA hystersis 
 
 <img width="1917" height="921" alt="image" src="https://github.com/user-attachments/assets/ea83a971-166f-49bb-9245-d49fe0ccfc24" />
-Figure 4 The resulting mathimatical confusion due to the hystersis that causes software mathimatical lag
+Figure 4 The resulting mathimatical confusion due to the hysteresis. 
 
 <img width="1065" height="632" alt="image" src="https://github.com/user-attachments/assets/d834a9e8-91f4-4182-b3d4-058ebc0e5707" />
 
-Figure 5 The FORC extraction experiment to get a 50 Temperature(input) to Curvature (output) samples to model the wire hysteresis at constant load
+Figure 5 The FORC extraction experiment for gathering a 50 Temperature(input) to Curvature (output) samples to model the wire hysteresis at constant load
 
 <img width="1907" height="927" alt="image" src="https://github.com/user-attachments/assets/3ff71cc4-1d51-4e81-acb1-965c4498bfb4" />
 
-Figure 6 The FORC we use to extract to Look up tables that define the heating and cooling paths 
+Figure 6 The FORC data plot we use to extract the Look up tables carrying the heating and cooling paths data. 
 
 
 <img width="1017" height="602" alt="image" src="https://github.com/user-attachments/assets/8cc450d2-3f14-4b4e-ab9a-628f7459f629" />
 
-Figure 7 The FeedForward FORC extracted look up tables configuration
+Figure 7 The FeedForward FORC extracted look up tables configuration.
 
 <img width="1917" height="926" alt="image" src="https://github.com/user-attachments/assets/cd592f10-9841-4aca-84bc-6190ef388064" />
 
-Figure 8 The eliminated mathimatical confusion results 
+Figure 8 The eliminated mathimatical confusion results.
 
 
 ## 🛠️ Pipeline & File Architecture
