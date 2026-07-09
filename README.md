@@ -14,7 +14,7 @@ This project resolves this issue by developing a **path-dependent feedforward co
 Figure 1 This block diagram is about analyzing the standalone SMA wire that is bent with sine wave input temperature command.
 <img width="937" height="620" alt="image" src="https://github.com/user-attachments/assets/cf7520a5-59f4-4f4c-ac68-dc4183ba4a1c" />
 
-Figure 2 The plot shows the distinction between heating and cooling paths due to the material hysteresis which results multi outputs for one input value.
+Figure 2 The plot shows the distinction between heating and cooling paths due to the material hysteresis which results multiple outputs for one input value.
 
 <img width="1321" height="692" alt="image" src="https://github.com/user-attachments/assets/08711e0d-76fb-43a9-bb3e-d1d066d20079" />
 Figure 3 A Negative PI configuration to analyze the effect of the SMA hystersis 
